@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1JS</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header_">
+        <div class="header-content-wrapper">
+            <div class="tooltip">
+                <img src="images/genetic-data-svgrepo-com.svg" alt="Логотип" class="logo-trigger">
+                <div class="tooltiptext">
+                    <img src="images/welsh_corgi_pembroke.jpg" alt="Класне фото" class="author-photo-tooltip">
+                    <p><strong>Автор:</strong> Назар</p>
+                    <p>Старанний студент <br>Демонстрація навичок HTML, CSS, JS.</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#unit-conversion">Конвертер Величин</a></li>
+                    <li><a href="#number-to-words">Суми Прописом</a></li>
+                    <li><a href="#vowel-words">Слова з Голосних</a></li>
+                    <li><a href="#array-average">Середнє Масиву</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="unit-conversion" class="task-block">
+            <h2>1. Конвертер Величин (км-м-см)</h2>
+            <div class="task-content">
+                <div>
+                    <label for="inputValue">Значення:</label>
+                    <input type="number" id="inputValue" placeholder="Введіть число">
+                </div>
+                <div>
+                    <label for="fromUnit">З:</label>
+                    <select id="fromUnit">
+                        <option value="km">Кілометри (км)</option>
+                        <option value="m">Метри (м)</option>
+                        <option value="cm">Сантиметри (см)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="toUnit">В:</label>
+                    <select id="toUnit">
+                        <option value="km">Кілометри (км)</option>
+                        <option value="m" selected>Метри (м)</option>
+                        <option value="cm">Сантиметри (см)</option>
+                    </select>
+                </div>
+                <button id="convertUnitsBtn">Конвертувати</button>
+                <p class="result" id="unitResult"></p>
+                <p class="error" id="unitError"></p>
+            </div>
+        </section>
+
+        <section id="number-to-words" class="task-block">
+            <h2>2. Суми Прописом</h2>
+            <div class="task-content">
+                <label for="numberInput">Введіть число (ціле або з 2 знаками після коми):</label>
+                <input type="text" id="numberInput" placeholder="Наприклад, 47 або 123.45">
+                <button id="convertToWordsBtn">Перевести в слова</button>
+                <p class="result" id="wordsResult"></p>
+                <p class="error" id="wordsError"></p>
+            </div>
+        </section>
+
+        <section id="vowel-words" class="task-block">
+            <h2>3. Кількість слів з голосних</h2>
+            <div class="task-content">
+                <label for="textInput">Введіть текст:</label>
+                <textarea id="textInput" rows="5" placeholder="Введіть ваш текст тут..."></textarea>
+                <button id="countVowelWordsBtn">Порахувати</button>
+                <p class="result" id="vowelWordsResult"></p>
+                <p class="error" id="vowelWordsError"></p>
+            </div>
+        </section>
+
+        <section id="array-average" class="task-block">
+            <h2>4. Середнє значення у масиві</h2>
+            <div class="task-content">
+                <label for="arrayInput">Введіть числа через кому або пробіл:</label>
+                <input type="text" id="arrayInput" placeholder="Наприклад, 1, 2, 5, 8">
+                <button id="calculateAverageBtn">Обчислити середнє</button>
+                <p class="result" id="averageResult"></p>
+                <p class="error" id="averageError"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/task1.js"></script>
+    <script src="js/task2.js"></script>
+    <script src="js/task3.js"></script>
+    <script src="js/task4.js"></script>
+</body>
+</html>
